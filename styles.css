@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&display=swap');
+
+:root {
+  color-scheme: light;
+  font-family: 'Assistant', sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  line-height: 1.1;
+}
+
+.intro {
+  margin: 12px auto 0;
+  max-width: 720px;
+  color: #374151;
+}
+
+.questionnaire {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.questionnaire ol {
+  counter-reset: question;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.questionnaire li {
+  position: relative;
+  padding: 20px 16px 20px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  display: grid;
+  gap: 12px;
+}
+
+.questionnaire li:last-child {
+  border-bottom: none;
+}
+
+.questionnaire li span {
+  display: block;
+  line-height: 1.6;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  padding: 16px;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 12px;
+  font-weight: 700;
+}
+
+.option-label {
+  text-align: center;
+}
+
+.answer-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.answer-row label {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.answer-row input {
+  accent-color: #2563eb;
+}
+
+.answer-row input:focus-visible + span,
+.answer-row input:checked + span {
+  font-weight: 700;
+}
+
+#submitButton {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px 18px;
+  font-size: 1rem;
+  font-weight: 700;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+#submitButton:hover {
+  background: #1d4ed8;
+}
+
+.result {
+  margin-top: 22px;
+  padding: 18px 20px;
+  border-radius: 14px;
+  background: #ecfdf5;
+  border: 1px solid #d1fae5;
+  color: #065f46;
+  font-size: 1rem;
+  line-height: 1.6;
+  display: none;
+}
+
+footer {
+  margin-top: 24px;
+  color: #374151;
+  font-size: 0.96rem;
+  line-height: 1.8;
+}
+
+footer p {
+  margin: 12px 0;
+}
+
+@media (max-width: 640px) {
+  .answer-row {
+    grid-template-columns: 1fr;
+  }
+}

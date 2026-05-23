@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>שאלון אדם רגיש מאוד</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>האם אתם אנשים רגישים מאוד?</h1>
+      <p class="intro">שאלון עצמי מתוך הספר "אדם רגיש מאוד" מאת ד"ר איליין ארון.</p>
+    </header>
+
+    <form id="questionnaire" class="questionnaire">
+      <div class="options-grid">
+        <div class="option-label">לא</div>
+        <div class="option-label">כן</div>
+      </div>
+
+      <div class="answers" id="answers"></div>
+
+      <button type="button" id="submitButton">האם אני אדם רגיש מאד?</button>
+    </form>
+
+    <section id="result" class="result" aria-live="polite"></section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
